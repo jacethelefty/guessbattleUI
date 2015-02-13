@@ -34,18 +34,21 @@ body{
 	font-size: 5em;
 	margin: 0px 0 0 20px;
 	width: 800px;
-	line-height: 1.5em;
+	line-height: 1.25em;
 }
 #popUpBox h1:nth-of-type(2){
 	font-size: 10em;
-	line-height: 1.25em;
-	margin-top: -30px;	
+	line-height: 1em;
+	margin-top: 0px;	
+}
+#popUpBox h2{
+	margin-top: 50px;
 }
 #continue{
+	display: block;
 	background-color: gold;
 	width: 250px;
-	float: right;
-	margin-right: 340px;
+	margin: 0px auto;
 	transition: all 0.5s ease-in 0s;
 }
 #continue:hover{
@@ -54,7 +57,7 @@ body{
 li{
 	display: inline-block;
 	list-style: none;
-	margin: -270px -20px 0 0;
+	margin: -270px 0px 0 0;
 	float: right;
 	opacity: 1.0;
 	transition: all .5s ease 0s;
