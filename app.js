@@ -29,71 +29,33 @@
 <!-- ===========================GUESS BATTLE GAME============================== -->
 
 function guessBattle(){
-var answer, guess, guess2, message;
+var answer, guess, guess2;
 
 answer = Math.floor(Math.random() * 10);	
 
 guess = document.getElementById('guess1').value;
 guess2 = document.getElementById('guess2').value;
 
-if(guess>10){
-guess = alert("Hey Player 1, you need to pick a lower number!");
-guess = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a lower number than you did last time!");
-}else if (guess<=0.999) {
-guess = alert("Hey Player 1, you need to pick a higher number!");
-guess = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a higher number than you did last time!");
-}else if(isNaN(guess) == true){
-guess = prompt("Hey Player 1, we're playing with numbers here.\n" + "Your guess of " + guess + " is not a number.\n" + "Please Try Again!")
-}	
+hidePopUpBox();
 
-if(guess>10){
-guess = alert("Hey Player 1, you need to pick a lower number!");
-guess = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a lower number than you did last time!");
-}else if (guess<=0.999) {
-guess = alert("Hey Player 1, you need to pick a higher number!");
-guess = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a higher number than you did last time!");
-}else if(isNaN(guess) == true){
-guess = prompt("Hey Player 1, we're playing with numbers here.\n" + "Your guess of " + guess + " is not a number.\n" + "Please Try Again!")
-}					
-
-if(guess2>10){
-guess2 = alert("Hey Player 2, you need to pick a lower number!");
-guess2 = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a lower number than you did last time!");
-}else if (guess2<=0.999) {
-guess2 = alert("Hey Player 2, you need to pick a higher number!");
-guess2 = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a higher number than you did last time!");
-}else if(isNaN(guess2) == true){
-guess2 = prompt("Hey Player 2, we're playing with numbers here.\n" + "Your guess of " + guess2 + " is not a number.\n" + "Please Try Again!")
-}		
-
-if(guess2>10){
-guess2 = alert("Hey Player 2, you need to pick a lower number!");
-guess2 = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a lower number than you did last time!");
-}else if (guess2<=0.999) {
-guess2 = alert("Hey Player 2, you need to pick a higher number!");
-guess2 = prompt("Please pick a new number between 1 and 10. \nDon't forget to pick a higher number than you did last time!");
-}else if(isNaN(guess2) == true){
-guess2 = prompt("Hey Player 2, we're playing with numbers here.\n" + "Your guess of " + guess2 + " is not a number.\n" + "Please Try Again!")
-}			
-
-if(guess == answer && guess2 == answer ){			 
-message = "WOW! You both won!";
+if(guess == answer && guess2 == answer ){
+document.getElementById('poph1').innerHTML = "WOW! You both won!";			 
 }else if(guess == answer){
-message = "Player 1 is the Winner";
+document.getElementById('poph1').innerHTML = "Player 1 is the winner of";
 }else if(guess2 == answer){
-message = "Player 2 is the Winner";
+document.getElementById('poph1').innerHTML = "Player 2 is the winner of";
 }else{
-message = "Neither one of you are winners! Please try Guess Battle again!";
-}
-alert(message);
+document.getElementById('poph1').innerHTML = "Neither one of you won";
 }
 
+document.getElementById("popUpBox").style.display="block";
+document.getElementById('continue').innerHTML = "Reset Game";
+}
 <!-- ==========================RELOAD PAGE ON BUTTON CLICK===================== -->
 
 
 function refreshPage() {		
 window.location.reload(true);
 }
-
 
 
