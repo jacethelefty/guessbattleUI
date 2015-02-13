@@ -1,4 +1,4 @@
-# guessbattle
+# guessbattle UI
 GuessBattle Mini JavaScript Game
 
 # Author: Jason Montoya
