@@ -50,61 +50,26 @@
 <script>
   
   <!-- ==========================PREVENT NUMBERS GREATER THAN 10===================== -->
-$(function () {
-    $(".txt").on("keyup", function(event) {
-        // don't handle backspace, delete, pgup/pgdn, home/end, or arrow keys:
-        if (event.keyCode === 8 || event.keyCode === 46 || event.keyCode >= 33 && event.keyCode <= 40) return false;
-        
-        var currentEl = $(this);
-        var value = $(currentEl).val();
-        
-        // remove letters...
-        value = value.replace(/[^0-9.-]/g, "");
-        
-        var hasDecPlace = value.match(/\./);
-        
-        // separate integer from decimal places:
-        var pieces = value.split('.');
-        var integer = pieces[0].replace('-', '');
-        var decPlaces = ""
-        if (pieces.length > 1)
-        {
-            pieces.shift();
-            decPlaces = pieces.join('').replace('-', '');
+   $(".txt.input-sm").keydown(function (event) {
+    
+        //prevent using shift with numbers
+        if (event.shiftKey == true) {
+            event.preventDefault();
         }
-        
-        // handle numbers greater than 10.00... :
-        if (parseInt(integer) > 10 || parseInt(integer) === 10 && parseInt(decPlaces) > 0)
-        {
-            integer = "10";
-            decPlaces = getZeroedDecPlaces(decPlaces);
-            alert("Your number must be between 1 and 10");
-        } // ...and less than 0:
-        else if (parseInt(integer) < 1)
-        {
-            integer = "1";
-            decPlaces = getZeroedDecPlaces(decPlaces);
-            alert("Your number must be between 1 and 10");
+    
+        if (!((event.keyCode == 190) || (event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 96 && event.keyCode <= 105) || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 46)) {
+            event.preventDefault();
+    
         }
-        
-        // handle more than two decimal places:
-        if (decPlaces.length > 2)
-        {
-            decPlaces = decPlaces.substr(0, 2);
-            alert("Your number cannot have more than two decimal places");
-        }
-        
-        var newVal = hasDecPlace ? integer + '.' + decPlaces : integer;
-        
-        $(currentEl).val(newVal);
     });
     
-    function getZeroedDecPlaces(decPlaces) {
-        if (decPlaces === '') return '';
-        else if (decPlaces.length === 1) return '0';
-        else if (decPlaces.length >= 2) return '00';
-    }
-});
+    $(".txt.input-sm").keyup(function (event) {
+    
+        var number = parseFloat($(this).val());
+        if(number > 10 || number < 1){
+           $(this).val("");
+        }
+    });
 </script>
 
 
