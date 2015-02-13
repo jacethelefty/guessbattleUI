@@ -7,9 +7,7 @@
          url('fonts/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-
 html { 
   background: url(imgs/ring.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -18,11 +16,9 @@ html {
   background-size: cover;
   font-family: 'komika_axisregular';
 }
-
 body{
 	position: relative;
 }
-
 #popUpBox{
 	margin-top: -10px;
 	position: absolute;
@@ -55,9 +51,6 @@ body{
 #continue:hover{
 	color:black;
 }
-
-
-
 li{
 	display: inline-block;
 	list-style: none;
@@ -127,12 +120,9 @@ main{
 	padding: 40px;
 	opacity:0.9;
 }
-
 span{
 	font-size: 2em;
 }
-
-
 #guess1, #guess2{
 	font-family: 'komika_axisregular';
 	font-size: 1.5em;
@@ -163,8 +153,6 @@ span{
 #guess1:onblur, #guess2:onblur{
 	font-size: 1.5em;
 }
-
-
 #reload{
 	display: block;
 	width:230px;

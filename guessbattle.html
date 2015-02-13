@@ -2,56 +2,110 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <title>Guess Battle</title>
 <link rel="stylesheet" href="styles.css">
- <script src="app.js"></script> 
+<script src="app.js"></script>
+<!--  ==================================LOAD jQuery================================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
 </head>
-
 <body>
 
 <div class="backgroundImg">
 <main>
+<h1>Guess Battle</h1>
+<h2>Where only the strongest come to compete!</h2>
+<form action="" id="form1" name="form1" autocomplete="off">
 
-	<h1>Guess Battle</h1>
+<ul ="headerimgslist">
+<li><a href="apple.com"><img src="imgs/app.png" alt="apple.com" width="36" class="headerimgs"></a></li>
+<li><a href="https://twitter.com/montoyathelefty" target="blank"><img src="imgs/twitter.png" alt="twitter" width="36" class="headerimgs headerimgs2"></a></li>
+<li><a href="https://github.com/jacethelefty/guessbattleUI" target="blank"><img src="imgs/github.png" alt="github" width="36" class="headerimgs headerimgs3"></a></li>
+</ul>
 
-	<h2>Where only the strongest come to compete!</h2>
+<div id="popUpBox">
+<h1>Click continue to enter</h1>
+<h1>Guess Battle</h1>
+<button type="button"  onclick="hidePopUpBox()" id="continue">Continue</button>	
+</div>
 
-	<form action="" id="form1" name="form1" autocomplete="off">
+<h3 id="h3one"><span>Player 1</span> pick a number between <span> 1</span>and <span> 10</span>. After you are done, please hide your entry then pass to your opponent. </h3>
 
-	<ul ="headerimgslist">
-		<li><a href="apple.com"><img src="imgs/app.png" alt="apple.com" width="36" class="headerimgs"></a></li>
-		<li><a href="twitter.com"><img src="imgs/twitter.png" alt="twitter" width="36" class="headerimgs headerimgs2"></a></li>
-		<li><a href="github.com"><img src="imgs/github.png" alt="github" width="36" class="headerimgs headerimgs3"></a></li>
-	</ul>
-		
-		<div id="popUpBox">
-		<h1>Click continue to enter</h1>
-		<h1>Guess Battle</h1>
-		<button type="button"  onclick="hidePopUpBox()" id="continue">Continue</button>	
-		</div>
+<input type="text" id="guess1" class="txt input-sm" name="guess1" placeholder="Enter 1 -10 Here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter 1 -10 Here'">
+<button type="button" onclick="hideEntry()">Hide Entry</button> 
 
-		<h3 id="h3one"><span>Player 1</span> pick a number between <span> 1</span>and <span> 10</span>. After you are done, please hide your entry then pass to your opponent. </h3>
+<h3><span>Player 2</span> pick a number between <span> 1</span>and <span> 10</span>. After you are done, press the submit button to see who has won. </h3>
 
-		<input type="text" id="guess1" name="guess1" placeholder="Enter 1 -10 Here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter 1 -10 Here'">
-		<button type="button" onclick="hideEntry()">Hide Entry</button> 
+<input type="text" id="guess2" class="txt input-sm" name="guess2" placeholder="Enter 1 -10 Here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter 1 -10 Here'" >
+<button type="button" onclick="hideEntry2()">Hide Entry</button> 
 
-		<h3><span>Player 2</span> pick a number between <span> 1</span>and <span> 10</span>. After you are done, press the submit button to see who has won. </h3>
+<button type="submit" onclick="guessBattle()" id="submit">Submit Entries</button>	
 
-		<input type="text" id="guess2" name="guess2" placeholder="Enter 1 -10 Here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter 1 -10 Here'" >
-		<button type="button" onclick="hideEntry2()">Hide Entry</button> 
+<button type="button" onclick="refreshPage()" id="reload">Reload Game</button>
 
-		<button type="submit" onclick="guessBattle()" id="submit">Submit Entries</button>	
-
-		<button type="button" onclick="refreshPage()" id="reload">Reload Game</button>
-
-	</form>
-	
-	
+</form>
 
 </main>
 </div>
 
+<script>
+  
+  <!-- ==========================PREVENT NUMBERS GREATER THAN 10===================== -->
+$(function () {
+    $(".txt").on("keyup", function(event) {
+        // don't handle backspace, delete, pgup/pgdn, home/end, or arrow keys:
+        if (event.keyCode === 8 || event.keyCode === 46 || event.keyCode >= 33 && event.keyCode <= 40) return false;
+        
+        var currentEl = $(this);
+        var value = $(currentEl).val();
+        
+        // remove letters...
+        value = value.replace(/[^0-9.-]/g, "");
+        
+        var hasDecPlace = value.match(/\./);
+        
+        // separate integer from decimal places:
+        var pieces = value.split('.');
+        var integer = pieces[0].replace('-', '');
+        var decPlaces = ""
+        if (pieces.length > 1)
+        {
+            pieces.shift();
+            decPlaces = pieces.join('').replace('-', '');
+        }
+        
+        // handle numbers greater than 10.00... :
+        if (parseInt(integer) > 10 || parseInt(integer) === 10 && parseInt(decPlaces) > 0)
+        {
+            integer = "10";
+            decPlaces = getZeroedDecPlaces(decPlaces);
+            alert("Your number must be between 1 and 10");
+        } // ...and less than 0:
+        else if (parseInt(integer) < 1)
+        {
+            integer = "1";
+            decPlaces = getZeroedDecPlaces(decPlaces);
+            alert("Your number must be between 1 and 10");
+        }
+        
+        // handle more than two decimal places:
+        if (decPlaces.length > 2)
+        {
+            decPlaces = decPlaces.substr(0, 2);
+            alert("Your number cannot have more than two decimal places");
+        }
+        
+        var newVal = hasDecPlace ? integer + '.' + decPlaces : integer;
+        
+        $(currentEl).val(newVal);
+    });
+    
+    function getZeroedDecPlaces(decPlaces) {
+        if (decPlaces === '') return '';
+        else if (decPlaces.length === 1) return '0';
+        else if (decPlaces.length >= 2) return '00';
+    }
+});
+</script>
 
 
 </body>
