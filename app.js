@@ -1,4 +1,8 @@
-
+<!-- ==========================RELOAD PAGE ON BUTTON CLICK===================== -->
+function refreshPage() {		
+window.location.reload(true);
+}
+	
 	function hideEntry(){
 		var hide1 = document.getElementById('guess1').style.color;
 		if (hide1 == "white"){
@@ -50,12 +54,8 @@ document.getElementById('poph1').innerHTML = "Neither one of you won";
 
 document.getElementById("popUpBox").style.display="block";
 document.getElementById('continue').innerHTML = "Reset Game";
+document.getElementById("continue").onclick = refreshPage;
 }
-<!-- ==========================RELOAD PAGE ON BUTTON CLICK===================== -->
 
-
-function refreshPage() {		
-window.location.reload(true);
-}
 
 
