@@ -5,7 +5,17 @@ GuessBattle Mini JavaScript Game
 # Start Date: 2/3/15
 # For: codefellows Intro to CS and Web Dev
 
-# Sources: Reload Page JavaScript function 
-# from http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_reload
+# Sources: 
+# Full Page Background Image Cover:
+# http://css-tricks.com/perfect-full-page-background-image/
+
+# Prevent Numbers less than 1, greater than 10 and non-digit function:
+# http://jsfiddle.net/94ayn8b6/4/
+
+# Get value from input fields JS
+# https://stackoverflow.com/questions/11563638/javascript-get-input-text-value
+
+# Change CSS styles JS
+# https://stackoverflow.com/questions/10071286/javascript-change-div-style
 
 
