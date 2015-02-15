@@ -1,12 +1,12 @@
 @font-face {
-	font-family: 'komika_axisregular';
-	src: url('fonts/KOMIKAX_-webfont.eot');
-	src: url('fonts/KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
-	url('fonts/KOMIKAX_-webfont.woff') format('woff'),
-	url('fonts/KOMIKAX_-webfont.ttf') format('truetype'),
-	url('fonts/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'komika_axisregular';
+  src: url('fonts/KOMIKAX_-webfont.eot');
+  src: url('fonts/KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/KOMIKAX_-webfont.woff') format('woff'),
+  url('fonts/KOMIKAX_-webfont.ttf') format('truetype'),
+  url('fonts/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 html { 
   background: url(imgs/ring.jpg) no-repeat center center fixed; 
