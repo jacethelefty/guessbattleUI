@@ -9,6 +9,9 @@ GuessBattle Mini JavaScript Game
 # Full Page Background Image Cover:
 # http://css-tricks.com/perfect-full-page-background-image/
 
+# Background Image
+# http://profighter.pt/wp-content/uploads/2014/07/Boxing-Ring-Backround.jpg
+
 # Prevent Numbers less than 1, greater than 10 and non-digit function:
 # http://jsfiddle.net/94ayn8b6/4/
 
@@ -17,5 +20,3 @@ GuessBattle Mini JavaScript Game
 
 # Change CSS styles JS
 # https://stackoverflow.com/questions/10071286/javascript-change-div-style
-
-
