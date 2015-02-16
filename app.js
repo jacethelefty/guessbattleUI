@@ -1,7 +1,7 @@
 /* DISPLAY ENTER GAME SCREEN  */
 
   $('body').load(function(){
-  showPopUpBox();
+    showPopUpBox();
   });
 
 /* PREVENT NUMBERS LESS THAN 1, GREATER THAN 10, AND NON-DIGITS IN INPUT FILEDS */
