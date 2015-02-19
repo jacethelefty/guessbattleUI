@@ -1,4 +1,5 @@
 @font-face {
+<<<<<<< HEAD
 font-family: 'komika_axisregular';
 src: url('fonts/KOMIKAX_-webfont.eot');
 src: url('fonts/KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
@@ -7,6 +8,16 @@ url('fonts/KOMIKAX_-webfont.ttf') format('truetype'),
 url('fonts/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
 font-weight: normal;
 font-style: normal;
+=======
+  font-family: 'komika_axisregular';
+  src: url('fonts/KOMIKAX_-webfont.eot');
+  src: url('fonts/KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/KOMIKAX_-webfont.woff') format('woff'),
+  url('fonts/KOMIKAX_-webfont.ttf') format('truetype'),
+  url('fonts/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+>>>>>>> FETCH_HEAD
 }
 html { 
 background: url(imgs/ring.jpg) no-repeat center center fixed; 
@@ -17,6 +28,7 @@ background-size: cover;
 font-family: 'komika_axisregular';
 }
 body{
+<<<<<<< HEAD
 position: relative;
 }
 #popUpBox{
@@ -70,9 +82,61 @@ margin-left: -84px;
 }
 .headerimgs3{
 margin-left: -128px;
+=======
+  position: relative;
 }
-
+#popUpBox{
+  margin-top: -6px;
+  position: absolute;
+  top: 0;
+  width: 880px;
+  height: 700px;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+  display: block;
+}
+#popUpBox h1{
+  font-size: 5em;
+  margin: 0px 0 0 20px;
+  width: 800px;
+  line-height: 1.25em;
+}
+#popUpBox h1:nth-of-type(2){
+  font-size: 10em;
+  line-height: .875em;
+  margin-top: 10px;	
+}
+#popUpBox h2{
+  margin-top: 50px;
+}
+#continue{
+  display: block;
+  background-color: gold;
+  width: 250px;
+  margin: 0px auto;
+  transition: all 0.5s ease-in 0s;
+}
+#continue:hover{
+  color:black;
+}
+li{
+  display: inline-block;
+  list-style: none;
+  margin: -270px 0px 0 0;
+  float: right;
+  opacity: 1.0;
+  transition: all .5s ease 0s;
+}
+.headerimgs2{
+  margin-left: -84px;
+}
+.headerimgs3{
+  margin-left: -128px;
+>>>>>>> FETCH_HEAD
+}
 .headerimgs:hover{
+<<<<<<< HEAD
 cursor: pointer;
 opacity: 0.5;
 }
@@ -91,24 +155,46 @@ margin: -2px 0 0 0;
 }
 #h3one{
 margin-top: -16px;
+=======
+  cursor: pointer;
+  opacity: 0.5;
+}
+h1, h2, #guess1, #guess2{
+  text-align:center;
+}
+h1{
+  font-size: 8em;
+  line-height: .875em;
+  margin-top: -44px;
+}
+h2{
+  margin-top: -72px;
+}
+h3{
+  margin: -2px 0 0 0;
+}
+#h3one{
+  margin-top: -16px;
+>>>>>>> FETCH_HEAD
 }
 button{
-font-family: 'komika_axisregular';
-display: inline;
-width: 200px;
-background-color: #000;
-color:#fff;
-margin: 30px 0 0 30px;
-padding: 3px 5px;
-font-size: 1.5em;
-border: 1px solid black;
-transition: all 0.5s ease-in 0s;
+  font-family: 'komika_axisregular';
+  display: inline;
+  width: 200px;
+  background-color: #000;
+  color:#fff;
+  margin: 30px 0 0 30px;
+  padding: 3px 5px;
+  font-size: 1.5em;
+  border: 1px solid black;
+  transition: all 0.5s ease-in 0s;
 }
 button:hover{
-cursor: pointer;
-color: #69D2E7;
+  cursor: pointer;
+  color: #69D2E7;
 }
 #submit{
+<<<<<<< HEAD
 background-color: gold;
 width: 250px;
 float: right;
@@ -172,3 +258,63 @@ transition: all 0.5s ease-in 0s;
 #reload:hover{
 color:gold;
 }
+=======
+  background-color: gold;
+  width: 250px;
+  float: right;
+  transition: all 0.5s ease-in 0s;
+}
+#submit:hover{
+  color:black;
+}
+main{
+  width: 880px;
+  height: 600px;
+  background-color: #CCC;
+  border: 1px solid #000;
+  margin: 20px auto;
+  padding: 40px;
+  opacity:0.9;
+}
+span{
+  font-size: 2em;
+}
+#guess1, #guess2{
+  font-family: 'komika_axisregular';
+  font-size: 1.5em;
+  width: 242px;
+  height: 80px;
+  min-width: 242px;
+  max-width: 242px;
+  margin: -40px 10px 0 80px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#guess1:focus, #guess2:focus {
+  display: inline-block;
+  font-size: 6em;
+  border: 1px solid gold;
+  text-align: center;
+  height: 130px;
+  padding: 0 3px 18px 3px ;
+  margin-top: -54px;
+  opacity: 0.925;
+  width: 254px;
+  border: 1px solid transparent gold;
+  border-bottom: 1px solid gold;
+  outline: 0;
+}
+#guess1:onblur, #guess2:onblur{
+  font-size: 1.5em;
+}
+#reload{
+  display: block;
+  width:230px;
+  float: right;
+  margin: 0 0 0 20px;
+  transition: all 0.5s ease-in 0s;
+}
+#reload:hover{
+  color:gold;
+}
+>>>>>>> FETCH_HEAD
