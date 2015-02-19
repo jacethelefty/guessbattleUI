@@ -9,35 +9,40 @@ function guessBattle(){
   $('#popUpBox').css('display', 'block');
 
   var p1 = $( '#poph1' );
+
   if(guess1 == answer && guess2 == answer ){
     p1.text( "WOW! You both won!" );		 
   }else if(guess1 == answer){
     p1.text( "Player 1 is the winner of" );
   }else if(guess2 == answer){
-    p1.text( "Player 2 is the winner of");
+    p1.text( "Player 2 is the winner of" );
   }else{
     p1.text( "Neither one of you won" );
   }
 
   /* DISPLAY GAME RESULTS SCREEN */
   $('#popUpBox').css('display', 'block');
-  $( '#continue' ).text( "Reset Game" );
-  $( '#continue' ).attr("onclick","refreshPage()");
-}
+  $('#continue').text( "Reset Game" );
+  $('#continue').attr("onclick","refreshPage()");
 
-/* CLICK FUNCTIONS */
+}   //END GUESS BATTLE
 
-  $('#continue').click(function () {
-    $('#popUpBox').slideUp(600);
-  });
+  /* PREVENT EMPTY CONTENT IN INPUT FIELDS */
+
   $('input').focus(function() {
     $(this).attr('placeholder', ' ')
           }).blur(function() {
     $(this).attr('placeholder', 'Enter 1-10 Here')
   });
 
-  $('#hide1').click(function () {
-    var g1 = $('#guess1');
+      /* CLICK FUNCTIONS */
+
+  $('#continue').click(function () {
+    $('#popUpBox').slideUp(600);
+  });
+
+  $('.hide').click(function(){
+    var g1 = $(this).prev();
     if (g1.hasClass("blackout")){
         g1.addClass("whiteout");
         g1.removeClass("blackout");
@@ -45,31 +50,21 @@ function guessBattle(){
     }else{
         g1.addClass('blackout');
         $(this).text('hide entry');
-    }
-  });
-  $('#hide2').click(function () {
-    var g2 = $('#guess2');
-    if (g2.hasClass("blackout")){
-        g2.addClass("whiteout");
-        g2.removeClass("blackout");
-        $(this).text('show entry');
-    }else{
-        g2.addClass('blackout');
-        $(this).text('hide entry');
-    }
-  });
+    }   
+  });       
 
   $('#submit').click(function(){
     guessBattle();
   });
+  
   $('#reload').click(function(){
     refreshPage();
   });
 
-/* RELOAD PAGE */
-function refreshPage() {		
-  window.location.reload(true);
-}
+  /* RELOAD PAGE */
+  function refreshPage() {		
+    window.location.reload(true);
+  }
 
 /* PREVENT NUMBERS LESS THAN 1, GREATER THAN 10, AND NON-DIGITS IN INPUT FILEDS */
 /* CODE COPIED FROM http://jsfiddle.net/94ayn8b6/4/ ON FEB 13TH 2015 */
