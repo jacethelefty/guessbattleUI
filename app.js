@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* CALCULATE GAME RESULTS FUNCTION */
+>>>>>>> FETCH_HEAD
 function guessBattle(){
   var answer, guess1, guess2;
 
@@ -100,4 +104,9 @@ function refreshPage() {
     if(number > 10 || number < 1){
       $(this).val("");
     }
+<<<<<<< HEAD
   });
+=======
+  });
+
+>>>>>>> FETCH_HEAD
