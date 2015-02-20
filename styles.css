@@ -156,11 +156,11 @@ span{
 .guess:onblur{
 	font-size: 1.5em;
 }
-.whiteout{
-	color:white;
-}
 .blackout{
 	color:black;
+}
+.whiteout{
+	color:white;
 }
 #reload{
 	display: block;

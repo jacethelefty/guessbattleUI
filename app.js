@@ -24,7 +24,7 @@ function guessBattle(){
   /* DISPLAY GAME RESULTS SCREEN */
   $('#popUpBox').css('display', 'block');
   $('#continue').text( "Reset Game" );
-  $('#continue').attr("onclick","refreshPage()");
+  $('#continue').click(refreshPage);
 
 }   //END GUESS BATTLE
 
@@ -43,15 +43,9 @@ function guessBattle(){
   });
 
   $('.hide').click(function(){
-    var g1 = $(this).prev();
-    if (g1.hasClass("blackout")){
-        g1.addClass("whiteout");
-        g1.removeClass("blackout");
-        $(this).text('show entry');
-    }else{
-        g1.addClass('blackout');
-        $(this).text('hide entry');
-    }
+    var guessInput = $(this).prev();
+    guessInput.toggleClass('whiteout');
+    $(this).text( guessInput.hasClass('whiteout') ? 'show' : 'hide' + ' entry');
   });
 
   $('#submit').click(function(){
