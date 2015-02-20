@@ -12,6 +12,6 @@ GuessBattle Mini JavaScript Game
 
 [Prevent Numbers less than 1, greater than 10 and non-digit function:](http://jsfiddle.net/94ayn8b6/4/)
 
-[Get value from input fields JS](https://stackoverflow.com/questions/11563638/javascript-get-input-text-value)
+[Get value from input fields JS:](https://stackoverflow.com/questions/11563638/javascript-get-input-text-value)
 
-[Change CSS styles JS](https://stackoverflow.com/questions/10071286/javascript-change-div-style)
+[Change CSS styles JS:](https://stackoverflow.com/questions/10071286/javascript-change-div-style)
