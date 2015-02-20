@@ -60,10 +60,14 @@ body{
 li{
 	display: inline-block;
 	list-style: none;
-	margin: -270px 0px 0 0;
-	float: right;
+	margin: -270px 0px 2px 0;
 	opacity: 1.0;
 	transition: all .5s ease 0s;
+}
+.headerimgslist{
+  	float: right;
+  	margin-top: -20px;
+  	margin-bottom: 4px;
 }
 .headerimgs2{
 	margin-left: -84px;
@@ -80,7 +84,8 @@ h1{
 	font-size: 8em;
 	text-align: center;
 	line-height: .875em;
-	margin-top: -44px;
+	margin-top: -40px;
+	z-index: 5;
 }
 h2{
 	text-align: center;
@@ -156,11 +161,11 @@ span{
 .guess:onblur{
 	font-size: 1.5em;
 }
-.whiteout{
-	color:white;
-}
 .blackout{
 	color:black;
+}
+.whiteout{
+	color:white;
 }
 #reload{
 	display: block;
@@ -171,4 +176,78 @@ span{
 }
 #reload:hover{
 	color:gold;
+}
+
+@media (max-width: 880px) {
+	#popUpBox{
+		width: 100%;
+		height: 100%;
+	}
+	#popUpBox h1{
+	font-size: 1em;
+	margin: 40px 0 0 20px;
+	width: 90%;
+	line-height: 1.25em;
+	}
+	#popUpBox h1:nth-of-type(2){
+		font-size: 4em;
+		line-height: .875em;
+		margin-top: 10px;	
+	}
+	#popUpBox h2{
+		margin-top: 20px;
+	}
+	#continue{
+		margin-top: 50px;
+	}
+  main {
+  width: 100%;
+  height: 100%;
+	border: none;
+	margin: -10px 0 0 -10px;
+	padding: 10px;
+	opacity:0.9;
+  }
+  .headerimgslist{
+  	margin-top: 20px;
+  }
+  h1{
+  font-size: 5em;
+  margin-top: 60px;
+  }
+  h2{
+  font-size: .75em;
+  margin-top: -40px;
+  }
+  h3{
+  font-size: .75em;
+  width: 80%;
+  margin: 0 30px;
+  opacity: 1;
+  }
+  #h3one{
+  	margin-top: 25px;
+  }
+  span{
+  	font-size: 2em;
+  	line-height: 1.25em;
+  	color: gold;
+  	opacity: 1;
+  }
+  .guess, .hide{
+  	display: block;
+  	margin: 20px auto;
+  }
+  #submit, #reload{
+   	display: block;
+  	margin: 40px auto;
+  	float: none;	
+  }
+  #submit{
+  	margin-top: 80px;
+  }
+  .guess:focus{
+  	display: block;
+  	margin: 10px auto;
+  }
 }
