@@ -64,10 +64,13 @@ li{
 	opacity: 1.0;
 	transition: all .5s ease 0s;
 }
+main{
+	position: relative;
+}
 .headerimgslist{
-  	float: right;
-  	margin-top: -20px;
-  	margin-bottom: 4px;
+  	position: absolute;
+  	top: 20px;
+  	right:20px;
 }
 .headerimgs2{
 	margin-left: -84px;
@@ -75,7 +78,6 @@ li{
 .headerimgs3{
 	margin-left: -128px;
 }
-
 .headerimgs:hover{
 	cursor: pointer;
 	opacity: 0.5;
@@ -84,12 +86,13 @@ h1{
 	font-size: 8em;
 	text-align: center;
 	line-height: .875em;
-	margin-top: -40px;
-	z-index: 5;
+	margin: -44px auto 4px;
+	width: 860px;
+	display: block;
 }
 h2{
 	text-align: center;
-	margin-top: -72px;
+	margin-top: 4px;
 }
 h3{
 	margin: -2px 0 0 0;
@@ -118,6 +121,7 @@ button:hover{
 	width: 250px;
 	float: right;
 	transition: all 0.5s ease-in 0s;
+	margin-bottom: 2px;
 }
 #submit:hover{
 	color:black;
@@ -184,7 +188,7 @@ span{
 		height: 100%;
 	}
 	#popUpBox h1{
-	font-size: 1em;
+	font-size: 2em;
 	margin: 40px 0 0 20px;
 	width: 90%;
 	line-height: 1.25em;
@@ -210,14 +214,16 @@ span{
   }
   .headerimgslist{
   	margin-top: 20px;
+  	clear: both;
   }
   h1{
+  width: 100%;
   font-size: 5em;
   margin-top: 60px;
   }
   h2{
   font-size: .75em;
-  margin-top: -40px;
+  margin-top: 20px;
   }
   h3{
   font-size: .75em;
