@@ -1,3 +1,5 @@
+$('.main').css('display','none')
+
 function guessBattle(){
   var answer, guess1, guess2;
 
@@ -6,7 +8,6 @@ function guessBattle(){
   guess1 = $('#guess1').val();
   guess2 = $('#guess2').val();
 
-  $('main').css('display','none')
   $('#popUpBox').css('display', 'block');
 
   var p1 = $( '#poph1' );
@@ -22,7 +23,7 @@ function guessBattle(){
   }
 
   /* DISPLAY GAME RESULTS SCREEN */
-  $('main').css('display','none')
+  $('.main').css('display','none')
   $('#popUpBox').css('display', 'block');
   $('#continue').text( "Reset Game" );
   $('#continue').click(refreshPage);
@@ -41,6 +42,7 @@ function guessBattle(){
 
   $('#continue').click(function () {
     $('#popUpBox').slideUp(600);
+    $('.main').css('display','block').show(600);
   });
 
   $('.hide').click(function(){
