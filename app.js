@@ -6,6 +6,7 @@ function guessBattle(){
   guess1 = $('#guess1').val();
   guess2 = $('#guess2').val();
 
+  $('main').css('display','none')
   $('#popUpBox').css('display', 'block');
 
   var p1 = $( '#poph1' );
@@ -21,6 +22,7 @@ function guessBattle(){
   }
 
   /* DISPLAY GAME RESULTS SCREEN */
+  $('main').css('display','none')
   $('#popUpBox').css('display', 'block');
   $('#continue').text( "Reset Game" );
   $('#continue').click(refreshPage);
@@ -55,6 +57,7 @@ function guessBattle(){
   });
 
   $('#reload').click(function(){
+    $('main').css('display','none')
     refreshPage();
   });
 

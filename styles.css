@@ -20,15 +20,14 @@ body{
 	position: relative;
 }
 #popUpBox{
-	margin-top: -6px;
-	position: absolute;
-	top: 0;
 	width: 880px;
 	height: 700px;
 	background-color: white;
 	border: 2px solid black;
 	text-align: center;
 	display: block;
+	margin: -6px auto;
+	z-index: 100;
 }
 .hidePopUpBox{
 	display: none;
@@ -64,7 +63,7 @@ li{
 	opacity: 1.0;
 	transition: all .5s ease 0s;
 }
-main{
+.main{
 	position: relative;
 }
 .headerimgslist{
@@ -126,14 +125,14 @@ button:hover{
 #submit:hover{
 	color:black;
 }
-main{
+.main{
 	width: 880px;
 	height: 600px;
 	background-color: #CCC;
 	border: 1px solid #000;
 	margin: 20px auto;
 	padding: 40px;
-	opacity:0.9;
+	opacity:1;
 }
 span{
 	font-size: 2em;
