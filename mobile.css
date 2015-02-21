@@ -72,5 +72,6 @@
   .guess:focus{
   	display: block;
   	margin: 10px auto;
+    font-size: 6em;
   }
 }
