@@ -72,17 +72,5 @@
   .guess:focus{
   	display: block;
   	margin: 10px auto;
-    font-size: 2em;
-    border: 1px solid gold;
-    text-align: center;
-    height: 30px;
-    padding: 3px;
-    margin: 0;
-    opacity: 1;
-    width: 60px;
-    outline: 0;
   }
-
-
-
 }
