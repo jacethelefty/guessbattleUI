@@ -1,13 +1,8 @@
 @media (max-width: 880px) {
 	#popUpBox{
 		width: 100%;
-<<<<<<< Updated upstream
-		height: 100%;
-		z-index:100;
-=======
 		height: 500px;
-		z-index:50;
->>>>>>> Stashed changes
+		z-index:100;
 	}
 	#popUpBox h1{
 	font-size: 2em;
