@@ -1,95 +1,88 @@
 @font-face {
-  font-family: 'komika_axisregular';
-  src: url('fonts/KOMIKAX_-webfont.eot');
-  src: url('fonts/KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/KOMIKAX_-webfont.woff') format('woff'),
-  url('fonts/KOMIKAX_-webfont.ttf') format('truetype'),
-  url('fonts/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'komika_axisregular';
+	src: url('fonts/KOMIKAX_-webfont.eot');
+	src: url('fonts/KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/KOMIKAX_-webfont.woff') format('woff'),
+	url('fonts/KOMIKAX_-webfont.ttf') format('truetype'),
+	url('fonts/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 html { 
-  background: url(imgs/ring.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: 'komika_axisregular';
+	background: url(imgs/ring.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: 'komika_axisregular';
 }
 body{
-  position: relative;
+	position: relative;
 }
 #popUpBox{
-  margin-top: -6px;
-  position: absolute;
-  top: 0;
-  width: 880px;
-  height: 700px;
-  background-color: white;
-  border: 2px solid black;
-  text-align: center;
-  display: block;
+	margin-top: -6px;
+	position: absolute;
+	top: 0;
+	width: 880px;
+	height: 700px;
+	background-color: white;
+	border: 2px solid black;
+	text-align: center;
+	display: block;
 }
 .hidePopUpBox{
-  display: none;
+	display: none;
 }
 #popUpBox h1{
-  font-size: 5em;
-  margin: 0px 0 0 20px;
-  width: 800px;
-  line-height: 1.25em;
+	font-size: 5em;
+	margin: 0px 0 0 20px;
+	width: 800px;
+	line-height: 1.25em;
 }
 #popUpBox h1:nth-of-type(2){
-  font-size: 10em;
-  line-height: .875em;
-  margin-top: 10px;	
+	font-size: 10em;
+	line-height: .875em;
+	margin-top: 10px;	
 }
 #popUpBox h2{
-  margin-top: 50px;
+	margin-top: 50px;
 }
 #continue{
-  display: block;
-  background-color: gold;
-  width: 250px;
-  margin: 0px auto;
-  transition: all 0.5s ease-in 0s;
+	display: block;
+	background-color: gold;
+	width: 250px;
+	margin: 0px auto;
+	transition: all 0.5s ease-in 0s;
 }
 #continue:hover{
-  color:black;
+	color:black;
 }
 li{
-  display: inline-block;
-  list-style: none;
-  margin: -270px 0px 2px 0;
-  opacity: 1.0;
-  transition: all .5s ease 0s;
+	display: inline-block;
+	list-style: none;
+	margin: -270px 0px 2px 0;
+	opacity: 1.0;
+	transition: all .5s ease 0s;
 }
 main{
 	position: relative;
 }
 .headerimgslist{
-<<<<<<< HEAD
   	position: absolute;
   	top: 20px;
   	right:20px;
-=======
-  float: right;
-  margin-top: -20px;
-  margin-bottom: 4px;
->>>>>>> FETCH_HEAD
 }
 .headerimgs2{
-  margin-left: -84px;
+	margin-left: -84px;
 }
 .headerimgs3{
-  margin-left: -128px;
+	margin-left: -128px;
 }
 .headerimgs:hover{
-  cursor: pointer;
-  opacity: 0.5;
+	cursor: pointer;
+	opacity: 0.5;
 }
 h1{
-<<<<<<< HEAD
 	font-size: 8em;
 	text-align: center;
 	line-height: .875em;
@@ -99,222 +92,92 @@ h1{
 }
 h2{
 	text-align: center;
-	margin-top: 4px;
-=======
-  font-size: 8em;
-  text-align: center;
-  line-height: .875em;
-  margin-top: -40px;
-  z-index: 5;
-}
-h2{
-  text-align: center;
-  margin-top: -72px;
->>>>>>> FETCH_HEAD
+	margin-top: 8px;
 }
 h3{
-  margin: -2px 0 0 0;
+	margin: -2px 0 0 0;
 }
-#h3one{ 
-  margin-top: -16px;
+#h3one{
+	margin-top: -16px;
 }
 button{
-  font-family: 'komika_axisregular';
-  display: inline;
-  width: 200px;
-  background-color: #000;
-  color:#fff;
-  margin: 30px 0 0 30px;
-  padding: 3px 5px;
-  font-size: 1.5em;
-  border: 1px solid black;
-  transition: all 0.5s ease-in 0s;
+	font-family: 'komika_axisregular';
+	display: inline;
+	width: 200px;
+	background-color: #000;
+	color:#fff;
+	margin: 30px 0 0 30px;
+	padding: 3px 5px;
+	font-size: 1.5em;
+	border: 1px solid black;
+	transition: all 0.5s ease-in 0s;
 }
 button:hover{
-  cursor: pointer;
-  color: #69D2E7;
+	cursor: pointer;
+	color: #69D2E7;
 }
 #submit{
-<<<<<<< HEAD
 	background-color: gold;
 	width: 250px;
 	float: right;
 	transition: all 0.5s ease-in 0s;
-	margin-bottom: 2px;
-=======
-  background-color: gold;
-  width: 250px;
-  float: right;
-  transition: all 0.5s ease-in 0s;
->>>>>>> FETCH_HEAD
+	margin-bottom: 4px;
 }
 #submit:hover{
-  color:black;
+	color:black;
 }
 main{
-  width: 880px;
-  height: 600px;
-  background-color: #CCC;
-  border: 1px solid #000;
-  margin: 20px auto;
-  padding: 40px;
-  opacity:0.9;
+	width: 880px;
+	height: 600px;
+	background-color: #CCC;
+	border: 1px solid #000;
+	margin: 20px auto;
+	padding: 40px;
+	opacity:0.9;
 }
 span{
-  font-size: 2em;
+	font-size: 2em;
 }
 .guess{
-  font-family: 'komika_axisregular';
-  font-size: 1.5em;
-  text-align: center;
-  width: 242px;
-  height: 80px;
-  min-width: 242px;
-  max-width: 242px;
-  margin: -40px 10px 0 80px;
-  padding-left: 3px;
-  padding-right: 3px;
+	font-family: 'komika_axisregular';
+	font-size: 1.5em;
+	text-align: center;
+	width: 242px;
+	height: 80px;
+	min-width: 242px;
+	max-width: 242px;
+	margin: -40px 10px 0 80px;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 .guess:focus {
-  display: inline-block;
-  font-size: 6em;
-  border: 1px solid gold;
-  text-align: center;
-  height: 130px;
-  padding: 0 3px 18px 3px ;
-  margin-top: -54px;
-  opacity: 0.925;
-  width: 254px;
-  outline: 0;
+	display: inline-block;
+	font-size: 6em;
+	border: 1px solid gold;
+	text-align: center;
+	height: 130px;
+	padding: 0 3px 18px 3px ;
+	margin-top: -54px;
+	opacity: 0.925;
+	width: 254px;
+	outline: 0;
 }
 .guess:onblur{
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 .blackout{
-  color:black;
+	color:black;
 }
 .whiteout{
-  color:white;
+	color:white;
 }
 #reload{
-  display: block;
-  width:230px;
-  float: right;
-  margin: 0 0 0 20px;
-  transition: all 0.5s ease-in 0s;
+	display: block;
+	width:230px;
+	float: right;
+	margin: 0 0 0 20px;
+	transition: all 0.5s ease-in 0s;
 }
 #reload:hover{
-  color:gold;
-}
-
-@media (max-width: 880px) {
-<<<<<<< HEAD
-	#popUpBox{
-		width: 100%;
-		height: 100%;
-	}
-	#popUpBox h1{
-	font-size: 2em;
-	margin: 40px 0 0 20px;
-	width: 90%;
-	line-height: 1.25em;
-	}
-	#popUpBox h1:nth-of-type(2){
-		font-size: 4em;
-		line-height: .875em;
-		margin-top: 10px;	
-	}
-	#popUpBox h2{
-		margin-top: 20px;
-	}
-	#continue{
-		margin-top: 50px;
-	}
-=======
-  #popUpBox{
-    width: 100%;
-    height: 100%;
-  }
-  #popUpBox h1{
-    font-size: 1em;
-    margin: 40px 0 0 20px;
-    width: 90%;
-    line-height: 1.25em;
-  }
-  #popUpBox h1:nth-of-type(2){
-    font-size: 4em;
-    line-height: .875em;
-    margin-top: 10px;	
-  }
-  #popUpBox h2{
-    margin-top: 20px;
-  }
-  #continue{
-    margin-top: 50px;
-  }
->>>>>>> FETCH_HEAD
-  main {
-    width: 100%;
-    height: 100%;
-    border: none;
-    margin: -10px 0 0 -10px;
-    padding: 10px;
-    opacity:0.9;
-  }
-  .headerimgslist{
-<<<<<<< HEAD
-  	margin-top: 20px;
-  	clear: both;
-  }
-  h1{
-  width: 100%;
-  font-size: 5em;
-  margin-top: 60px;
-  }
-  h2{
-  font-size: .75em;
-  margin-top: 20px;
-=======
-    margin-top: 20px;
-  }
-  h1{
-    font-size: 5em;
-    margin-top: 60px;
-  }
-  h2{
-    font-size: .75em;
-    margin-top: -40px;
->>>>>>> FETCH_HEAD
-  }
-  h3{
-    font-size: .75em;
-    width: 80%;
-    margin: 0 30px;
-    opacity: 1;
-  }
-  #h3one{
-    margin-top: 25px;
-  }
-  span{
-    font-size: 2em;
-    line-height: 1.25em;
-    color: gold;
-    opacity: 1;
-  }
-  .guess, .hide{
-    display: block;
-    margin: 20px auto;
-  }
-  #submit, #reload{
-    display: block;
-    margin: 40px auto;
-    float: none;	
-  }
-  #submit{
-    margin-top: 80px;
-  }
-  .guess:focus{
-    display: block;
-    margin: 10px auto;
-  }
+	color:gold;
 }

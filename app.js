@@ -44,13 +44,13 @@ function guessBattle(){
   $('.hide').click(function(){
     var guessInput = $(this).prev();
     guessInput.toggleClass('whiteout');
-    $(this).text( guessInput.hasClass('whiteout') ? 'show' + ' entry' : 'hide' + ' entry');  
+    $(this).text( guessInput.hasClass('whiteout') ? 'show entry' : 'hide entry' ); 
   });    
   
   //Click event to scroll to top
   $('#submit').click(function(){
-    guessBattle();
     $('html, body').animate({scrollTop : 0},800);
+    guessBattle();
     return false;
   });
 
