@@ -38,6 +38,18 @@ function guessBattle(){
     $(this).attr('placeholder', 'Enter 1-10 Here')
   });
 
+  /* PREVENT SUBMIT IF EMPTY INPUT FIELDS */
+
+  $(document).ready(function(){
+      $('#submit').attr('disabled',true);
+      $('#guess1' && '#guess2').keyup(function(){
+          if($(this).val().length !=0)
+              $('#submit').attr('disabled', false);            
+          else
+              $('#submit').attr('disabled',true);
+      })
+  });
+
       /* CLICK FUNCTIONS */
 
   $('#continue').click(function () {
