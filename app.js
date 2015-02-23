@@ -62,7 +62,7 @@ function guessBattle(){
     var guessInput = $(this).prev();
     guessInput.toggleClass('whiteout');
     $(this).text( guessInput.hasClass('whiteout') ? 'show entry' : 'hide entry' ); 
-  });    
+  });   
   
   //Click event to scroll to top
   $('#submit').click(function(){
