@@ -25,6 +25,7 @@ function guessBattle(){
   /* DISPLAY GAME RESULTS SCREEN */
   $('.main').css('display','none')
   $('#popUpBox').css('display', 'block');
+  /* CHANGE BUTTON TEXT AND ACTION */
   $('#continue').text( "Reset Game" );
   $('#continue').click(refreshPage);
 
