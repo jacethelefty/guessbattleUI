@@ -1,3 +1,5 @@
+$('.main').css('display','none')
+
 function guessBattle(){
   var answer, guess1, guess2;
 
@@ -22,7 +24,9 @@ function guessBattle(){
   document.getElementById('poph1').innerHTML = headerMessage;
 
   /* DISPLAY GAME RESULTS SCREEN */
+  $('.main').css('display','none')
   $('#popUpBox').css('display', 'block');
+  /* CHANGE BUTTON TEXT AND ACTION */
   $('#continue').text( "Reset Game" );
   $('#continue').click(refreshPage);
 
@@ -36,26 +40,40 @@ function guessBattle(){
     $(this).attr('placeholder', 'Enter 1-10 Here')
   });
 
+  /* PREVENT SUBMIT IF EMPTY INPUT FIELDS */
+
+  $(document).ready(function(){
+      $('#submit').attr('disabled',true);
+      $('#guess1' && '#guess2').keyup(function(){
+          if($(this).val().length !=0)
+              $('#submit').attr('disabled', false);
+          else
+              $('#submit').attr('disabled',true);
+      })
+  });
+
       /* CLICK FUNCTIONS */
 
   $('#continue').click(function () {
     $('#popUpBox').slideUp(600);
+    $('.main').css('display','block').show(600);
   });
 
   $('.hide').click(function(){
     var guessInput = $(this).prev();
     guessInput.toggleClass('whiteout');
-    $(this).text( guessInput.hasClass('whiteout') ? 'show' + ' entry' : 'hide' + ' entry');
+    $(this).text( guessInput.hasClass('whiteout') ? 'show entry' : 'hide entry' );
   });
 
   //Click event to scroll to top
   $('#submit').click(function(){
-    guessBattle();
     $('html, body').animate({scrollTop : 0},800);
+    guessBattle();
     return false;
   });
 
   $('#reload').click(function(){
+    $('main').css('display','none')
     refreshPage();
   });
 
