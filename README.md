@@ -15,3 +15,5 @@ GuessBattle Mini JavaScript Game
 [Get value from input fields JS:](https://stackoverflow.com/questions/11563638/javascript-get-input-text-value)
 
 [Change CSS styles JS:](https://stackoverflow.com/questions/10071286/javascript-change-div-style)
+
+[Auto-show Numeric Keyboard on Mobile:](https://stackoverflow.com/questions/3372380/how-to-force-keyboard-with-numbers-in-mobile-website-in-android)

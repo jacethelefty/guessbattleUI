@@ -8,8 +8,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
-html { 
-	background: url(imgs/ring.jpg) no-repeat center center fixed; 
+
+html {
+	background: url(imgs/ring.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -20,15 +21,14 @@ body{
 	position: relative;
 }
 #popUpBox{
-	margin-top: -6px;
-	position: absolute;
-	top: 0;
-	width: 880px;
-	height: 700px;
-	background-color: white;
-	border: 2px solid black;
-	text-align: center;
-	display: block;
+  width: 880px;
+  height: 700px;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+  display: block;
+  margin: -6px auto;
+  z-index: 100;
 }
 .hidePopUpBox{
 	display: none;
@@ -42,7 +42,7 @@ body{
 #popUpBox h1:nth-of-type(2){
 	font-size: 10em;
 	line-height: .875em;
-	margin-top: 10px;	
+	margin-top: 10px;
 }
 #popUpBox h2{
 	margin-top: 50px;
@@ -64,13 +64,13 @@ li{
 	opacity: 1.0;
 	transition: all .5s ease 0s;
 }
-main{
-	position: relative;
+.main{
+  position: relative;
 }
 .headerimgslist{
-  	position: absolute;
-  	top: 20px;
-  	right:20px;
+  position: absolute;
+  top: 20px;
+  right:20px;
 }
 .headerimgs2{
 	margin-left: -84px;
@@ -78,27 +78,28 @@ main{
 .headerimgs3{
 	margin-left: -128px;
 }
+
 .headerimgs:hover{
 	cursor: pointer;
 	opacity: 0.5;
 }
 h1{
-	font-size: 8em;
-	text-align: center;
-	line-height: .875em;
-	margin: -44px auto 4px;
-	width: 860px;
-	display: block;
+  font-size: 8em;
+  text-align: center;
+  line-height: .875em;
+  margin: -44px auto 4px;
+  width: 860px;
+  display: block;
 }
 h2{
-	text-align: center;
-	margin-top: 4px;
+  text-align: center;
+  margin-top: 8px;
 }
 h3{
 	margin: -2px 0 0 0;
 }
 #h3one{
-	margin-top: -16px;
+  margin-top: -16px;
 }
 button{
 	font-family: 'komika_axisregular';
@@ -117,23 +118,23 @@ button:hover{
 	color: #69D2E7;
 }
 #submit{
-	background-color: gold;
-	width: 250px;
-	float: right;
-	transition: all 0.5s ease-in 0s;
-	margin-bottom: 2px;
+  background-color: gold;
+  width: 250px;
+  float: right;
+  transition: all 0.5s ease-in 0s;
+  margin-bottom: 4px;
 }
 #submit:hover{
 	color:black;
 }
-main{
-	width: 880px;
-	height: 600px;
-	background-color: #CCC;
-	border: 1px solid #000;
-	margin: 20px auto;
-	padding: 40px;
-	opacity:0.9;
+.main{
+  width: 880px;
+  height: 600px;
+  background-color: #CCC;
+  border: 1px solid #000;
+  margin: 20px auto;
+  padding: 40px;
+  opacity:0.9;
 }
 span{
 	font-size: 2em;
@@ -180,80 +181,4 @@ span{
 }
 #reload:hover{
 	color:gold;
-}
-
-@media (max-width: 880px) {
-	#popUpBox{
-		width: 100%;
-		height: 100%;
-	}
-	#popUpBox h1{
-	font-size: 2em;
-	margin: 40px 0 0 20px;
-	width: 90%;
-	line-height: 1.25em;
-	}
-	#popUpBox h1:nth-of-type(2){
-		font-size: 4em;
-		line-height: .875em;
-		margin-top: 10px;	
-	}
-	#popUpBox h2{
-		margin-top: 20px;
-	}
-	#continue{
-		margin-top: 50px;
-	}
-  main {
-  width: 100%;
-  height: 100%;
-	border: none;
-	margin: -10px 0 0 -10px;
-	padding: 10px;
-	opacity:0.9;
-  }
-  .headerimgslist{
-  	margin-top: 20px;
-  	clear: both;
-  }
-  h1{
-  width: 100%;
-  font-size: 5em;
-  margin-top: 60px;
-  }
-  h2{
-  font-size: .75em;
-  margin-top: 20px;
-  }
-  h3{
-  font-size: .75em;
-  width: 80%;
-  margin: 0 30px;
-  opacity: 1;
-  }
-  #h3one{
-  	margin-top: 25px;
-  }
-  span{
-  	font-size: 2em;
-  	line-height: 1.25em;
-  	color: gold;
-  	opacity: 1;
-  }
-  .guess, .hide{
-  	display: block;
-  	margin: 20px auto;
-  }
-  #submit, #reload{
-   	display: block;
-  	margin: 40px auto;
-  	float: none;	
-  }
-  #submit{
-  	margin-top: 80px;
-  }
-  .guess:focus{
-  	display: block;
-  	margin: 10px auto;
-  }
 }
